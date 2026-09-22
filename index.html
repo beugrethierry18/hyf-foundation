@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=,, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>HYF Week 1</title>
+  </head>
+  <body>
+    <header>
+      <h1>Thierry Beugre</h1>
+      <p class="subtitle">I am currently a Student at HYF</p>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#my-photo">My Photo</a></li>
+          <li><a href="#my-interests">My Interests</a></li>
+          <li><a href="#products">Products</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>About me</h2>
+        <p>
+          My name is Thierry Beugre, and I am an
+          <strong>electrical engineer</strong> with a passion for technology and
+          programming. I have a strong background in electrical engineering,
+          which has provided me with a solid foundation in problem-solving and
+          analytical thinking. I worked as project coordinator in telecom sector
+          for 3 years, where I gained valuable experience in project management
+          and team collaboration. However, my true passion lies in web
+          development, and I have been dedicating my time to learning and honing
+          my skills in this field. I am excited to continue growing as a web
+          developer and contributing to innovative projects that make a positive
+          impact on people's lives and enjoyed for long time. Become web
+          developer has always been my dream and I am constantly learning and
+          building projects that help me improve my skills. My goal is to become
+          <em>a proficient web developer</em>. Thanks for looking at my LinkedIn
+          profile<a
+            href="https://www.linkedin.com/in/aka-athanase-thierry-beugre-500884163/"
+            target="_blank"
+          >
+            here </a
+          >to know more on my profile and my experience.
+        </p>
+      </section>
+      <section>
+        <h2>My Photo</h2>
+        <div class="profile-picture">
+          <img
+            src="https://placecats.com/300/200?fit=contain&position=top"
+            alt="A cat facing the viewer with a calm, attentive expression against a plain light background"
+          />
+        </div>
+      </section>
+      <section>
+        <h2>My Interests</h2>
+        <caption>
+          Films i've watched
+        </caption>
+        <ul>
+          <li>God of war, David Jaffe, 2005</li>
+          <li>Inception, Christopher Nolan, 2010</li>
+          <li>The dark knight, Christopher Nolan, 2008</li>
+        </ul>
+        <p>
+          I have watched many movies and i have enjoyed some of them, but the
+          three movies listed above are my favorite ones. I have watched them
+          multiple times and they never fail to entertain me. The first movie,
+          God of War, is an action-packed adventure that follows the journey of
+          a warrior seeking revenge. The second movie, Inception, is a
+          mind-bending thriller that explores the concept of dreams within
+          dreams. The third movie, The Dark Knight, is a superhero film that
+          delves into the complexities of morality and justice. Each of these
+          movies has left a lasting impression on me, and I highly recommend
+          them to anyone looking for an exciting and thought-provoking cinematic
+          experience.
+        </p>
+        <caption>
+          My favorite books i've read
+        </caption>
+        <ol>
+          <li>Les Canaris Sont Vides, Amadou Koné, 1976</li>
+          <li>Le Soleil des Independances, Léopold Sédar Senghor, 1966</li>
+          <li>L'Etranger, Albert Camus, 1942</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Products</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Names</th>
+              <th>Prices</th>
+              <th>In Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="product-name">HTML</td>
+              <td class="product-price">free</td>
+              <td class="in-stock">No</td>
+            </tr>
+            <tr>
+              <td class="product-name">CSS</td>
+              <td class="product-price">free</td>
+              <td class="in-stock">No</td>
+            </tr>
+            <tr>
+              <td class="product-name">JavaScript</td>
+              <td class="product-price">2000kr</td>
+              <td class="in-stock">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="product-description">
+          <p>
+            The products listed above are essential tools for web development.
+            HTML and CSS are the building blocks of web pages, allowing
+            developers to create structured content and visually appealing
+            designs. JavaScript, on the other hand, is a powerful programming
+            language that enables interactivity and dynamic functionality on
+            websites. While HTML and CSS are free to use, JavaScript may come at
+            a cost, depending on the specific libraries or frameworks utilized.
+            It is important for developers to have a solid understanding of
+            these products in order to create engaging and user-friendly web
+            experiences.
+          </p>
+        </div>
+        <div class="product-image">
+          <img
+            src="html.jpg"
+            alt="HTML logo on a plain background, representing the markup language used to structure web pages"
+          />
+          <img
+            src="css.jpeg"
+            alt="CSS logo on a plain background, representing the stylesheet language used to design web pages"
+          />
+          <img
+            src="javascript.jpg"
+            alt="JavaScript logo on a plain background, representing the programming language used to add interactivity to web pages"
+          />
+        </div>
+      </section>
+      <section>
+        <h2 class="title-form">Let me know who read me?</h2>
+        <form action="https://formspree.io/f/mnqvkwqk" method="POST">
+          <div class="form-group">
+            <legend>Personal & Contact Information</legend>
+
+            <select name="reason" id="civility">
+              <option value="civility">Mr.</option>
+              <option value="civility">Mrs.</option>
+              <option value="civility">Miss</option>
+              <option value="civility">Dr.</option>
+              <option value="civility">Sir</option>
+            </select>
+            <label for="first-name">First Name:</label>
+            <input
+              type="text"
+              id="first-name"
+              class="first-name"
+              name="name"
+              placeholder="Suzanne"
+              required
+            />
+            <label for="last-name">Last Name:</label>
+            <input
+              type="text"
+              id="last-name"
+              class="last-name"
+              name="name"
+              placeholder="Ahoudjo"
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              class="email"
+              name="email"
+              placeholder="suzanne.ahoudjo@example.com"
+              required
+            /><br />
+            <label for="choice">Do you want follow this formation?:</label>
+            <input
+              type="radio"
+              id="phone"
+              class="phone"
+              name="follow-up"
+              value="yes"
+            />
+            <label for="choice">Yes</label>
+            <input
+              type="radio"
+              id="choice"
+              class="choice"
+              name="follow-up"
+              value="no"
+            />
+            <label for="choice">No</label>
+          </div>
+
+          <div class="form-group">
+            <legend>Write something to me below:</legend>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message here..."
+            ></textarea>
+
+            <input type="submit" class="submit" value="Submit" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li>
+          <a
+            href="#https://www.linkedin.com/in/aka-athanase-thierry-beugre-500884163/"
+            >My LinkedIn</a
+          >
+        </li>
+        <li>
+          <a href="#https://github.com/beugrethierry18">My GitHub</a>
+        </li>
+        <li>
+          <a href="#https://codepen.io/beugrethierry18">My Codepen</a>
+        </li>
+        <li>
+          <a href="#">Products</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
