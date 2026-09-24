@@ -1,110 +1,153 @@
+/* Color Palette and Variables */
 :root {
   --clr-dark: #333;
-  --clr-light: white;
+  --clr-light: #ffffff;
   --clr-p: #555;
   --clr-set: #175b69;
   --bgd-body: #f4f4f4;
   --bgd-linear-1: linear-gradient(90deg, #152e58, #175b69);
   --bgd-linear-2: linear-gradient(90deg, #175b69, #152e58);
-  --font: "Montserrat", arial, sans-serif;
+  --font: "Montserrat", Arial, sans-serif;
   --border: 1px solid #ccc;
 }
 
+/* Basic CSS Reset */
 *,
 *::before,
 *::after {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: --var(--font);
+  font-family: var(--font);
   line-height: 1.6;
   background-color: var(--bgd-body);
   color: var(--clr-dark);
-  padding: 20px;
 }
+
+/* Header & Navigation (Mobile Default) */
 header {
   background: var(--bgd-linear-1);
   color: var(--clr-light);
   text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
+  padding: 15px;
   width: 100%;
-  margin-bottom: 20px;
 }
+
+header h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #adc2d3;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
 nav ul {
   display: flex;
+  flex-direction: column;
   list-style: none;
-  justify-content: center;
-  padding: 5px 0;
+  gap: 12px;
+  align-items: center;
 }
+
 nav a {
   text-decoration: none;
   color: var(--clr-light);
-  padding: 10px 15px;
+  padding: 8px 12px;
+  display: block;
 }
+
 nav a:hover {
   text-decoration: underline;
 }
 
+/* Navigation Contact Button Style & Hover Animation */
+nav a.btn {
+  background-color: var(--clr-light);
+  color: var(--clr-set);
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+nav a.btn:hover {
+  background-color: #247b8d; /* Blends harmoniously with header gradients */
+  color: var(--clr-light);
+  transform: translateY(-2px); /* Slight lift animation */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+
+/* Main Content Area */
 main {
-  margin-top: 150px;
-  padding: 20px;
+  padding: 20px 15px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #00112d;
-  margin-bottom: 2px;
-  text-align: center;
-}
-
-.subtitle {
-  text-align: center;
-  color: #adc2d3;
+section {
+  margin-bottom: 40px;
 }
 
 h2 {
-  font-size: 1.5rem;
-  color: #175b69;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: var(--clr-set);
+  margin: 15px 0 15px 0;
   text-decoration: underline;
   text-align: center;
 }
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--clr-dark);
+  margin: 15px 0 10px;
+}
+
 p {
   font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
+  color: var(--clr-p);
+  margin-bottom: 15px;
 }
 
 a {
   color: var(--clr-set);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
-  cursor: pointer;
 }
+
+/* Profile Picture */
 .profile-picture {
   display: flex;
   justify-content: center;
-  width: 600px;
-  height: 350px;
+  width: 100%;
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-bottom: 20px;
+.profile-picture img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
+/* Lists and Tables */
+ul,
 ol {
-  list-style-type: decimal;
   padding-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+.table-container {
+  overflow-x: auto;
 }
 
 table {
@@ -112,6 +155,7 @@ table {
   border-collapse: collapse;
   margin-bottom: 20px;
   border: var(--border);
+  background-color: var(--clr-light);
 }
 
 td,
@@ -128,124 +172,203 @@ th {
 
 .product-name {
   font-weight: bold;
-  text-align: center;
-}
-.product-price {
-  color: var(--clr-set);
-  text-align: center;
-}
-.in-stock {
-  text-align: center;
 }
 
-.product-image {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+.product-price {
+  color: var(--clr-set);
 }
+
+/* Product Cards / Images */
+.product-image {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
 .product-image img {
-  width: 30%;
-  height: 350px;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 20px;
-  transition: 0.5s;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
 .product-image img:hover {
-  width: 40%;
+  transform: scale(1.05);
   cursor: pointer;
-  filter: contrast(1.2);
+}
+
+/* Form Styles */
+.container-form {
+  background: var(--clr-light);
+  padding: 20px;
+  border-radius: 8px;
+  border: var(--border);
 }
 
 .form-group {
-  margin-bottom: 8px;
-}
-
-h2.title-form {
-  font-size: 1.5rem;
-  color: var(--clr-set);
-  margin-top: 50px;
-  text-decoration: underline;
-  text-align: center;
-}
-
-input [type="text"],
-input [type="email"],
-textarea {
-  width: 100%;
-  height: 350px;
-  margin-bottom: 5px;
-  padding: 12px 16px;
-  border: var(--border);
-  border-radius: 4px;
-}
-
-input [type="text"]:focus,
-textarea:focus {
-  border: #555;
-  box-shadow: 0 0 5px rgba(0, 0, #175b69, 1);
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--clr-dark);
   margin-bottom: 5px;
-  text-align: center;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: var(--border);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--clr-set);
+  box-shadow: 0 0 5px rgba(23, 91, 105, 0.5);
 }
 
 textarea {
   resize: vertical;
 }
 
-input[type="submit"] {
+/* Radio buttons layout */
+.radio-group p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.radio-options {
   display: flex;
-  width: 20%;
-  padding: 10px;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Checkbox choices layout */
+.checkbox-group p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.checkbox-options {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Submit button layout */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
   font-size: 16px;
   font-weight: bold;
   color: var(--clr-light);
   background: var(--bgd-linear-1);
   border: none;
   border-radius: 20px;
-  justify-content: center;
-  margin: 0 auto;
+  transition:
+    background 0.3s,
+    transform 0.2s;
 }
 
 input[type="submit"]:hover {
   background: var(--bgd-linear-2);
   cursor: pointer;
+  transform: translateY(-2px);
 }
 
+/* Footer Styles & Social Icons */
 footer {
   background: var(--bgd-linear-1);
   color: var(--clr-light);
   text-align: center;
-  padding: 20px 0;
-  margin-top: 20px;
-}
-footer ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  padding: 10px 0;
-}
-footer a {
-  text-decoration: none;
-  color: var(--clr-light);
-  padding: 10px 15px;
-}
-footer a:hover {
-  text-decoration: underline;
+  padding: 20px;
 }
 
-@media (max-width: 768px) {
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+}
+
+footer a {
+  color: var(--clr-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+footer a i {
+  font-size: 1.2rem;
+}
+
+footer a:hover {
+  color: #adc2d3;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet Screens (>= 600px) */
+@media (min-width: 600px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .product-image {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product-image img {
+    width: 31%;
+  }
+
+  input[type="submit"] {
+    width: 50%;
+    margin: 0 auto;
   }
 }
-@media (min-width: 480px) {
+
+/* Desktop Screens (>= 900px) */
+@media (min-width: 900px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  main {
+    margin-top: 140px;
+  }
+
   input[type="submit"] {
     width: 30%;
   }
