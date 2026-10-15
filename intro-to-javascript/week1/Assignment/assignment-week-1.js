@@ -7,12 +7,12 @@ console.log(`You will be ${age} years old in ${yearFuture}.`);
 
 // Assignment exercise Goodboy-Oldboy (A dog age calculator)
 
-const dogYearOfBirth = 2015;
+const dogYearOfBirth = 2020;
 const dogYearFuture = 2027;
 
 const shouldShowResultInDogYears = (inYearDog, inYearHuman) => {
   if (inYearDog === true) {
-    const calculateAgeDogInYearDog = dogYear * 7;
+    const calculateAgeDogInYearDog = (dogYearFuture - dogYearOfBirth) * 7;
     return `Your dog will be ${calculateAgeDogInYearDog} dog years old in ${dogYearFuture}`;
   } else if (inYearHuman === true) {
     const calculateAgeDogInYearHumanYear = dogYearFuture - dogYearOfBirth;
@@ -20,7 +20,7 @@ const shouldShowResultInDogYears = (inYearDog, inYearHuman) => {
   }
 };
 
-console.log(shouldShowResultInDogYears(false, true));
+console.log(shouldShowResultInDogYears(true, false));
 
 // Assignment exercise Housey pricey (A house price estimator)
 

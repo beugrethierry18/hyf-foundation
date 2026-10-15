@@ -1,0 +1,73 @@
+step 3
+
+1.  when userFormalName is not defined: 
+
+I typed my code like that :
+
+// step 3; smart-ease - Goes Global
+const person1 = ["KOFFI", "Yao"];
+const person2 = ["BENJAMIN", "Hugues"];
+
+const getFullName = (FirstName, surname, userFormalName, isWomen) => {
+  if (FirstName && surname) {
+    return `${FirstName} ${surname}`;
+  } else if (FirstName && surname && userFormalName === true) {
+    return `Lord ${FirstName} ${surname}`;
+  }
+};
+
+const fullName1 = getFullName(person1[0], person1[1]);
+const fullName2 = getFullName(person2[0], person2[1]);
+
+console.log(fullName1);
+console.log(fullName2);
+
+I noticed that it's the first condition which runs. So i defined userFormalName to check, it's the same reaction. therefore i moved the second condition (FirstName && surname && userFormalName === true) in first position without defined it in the calling, it is always the same.
+So i conclude that it's important to define all arguments (parameters) when calling function. 
+I also noticed that inside a function when i have several parameters within, i have to declare the first condition as one that has the most (Do prioritizing)
+
+2. As I said it above, i give the first priority to the condition that contains the most parameters: So I modified getFullName by placing the declaration if within (FirstName && surname && userFormalName === true) at the first.
+3. Test on the link https://codepen.io/hackyourfuture-cph/pen/jJWwbN
+when i went on the link:
+i noticed that my code didn't work, I had to modify it like that:
+
+const firstName = "Koffi";
+const surname = "Yao";
+const userFormalName = true;
+const isWoman = false;
+
+function getFullName (FirstName, surname, userFormalName, isWomen) {
+  if (FirstName && surname && userFormalName === true) {
+    return `Lord ${FirstName} ${surname}`;
+  } else if (
+    FirstName &&
+    surname &&
+    userFormalName === false &&
+    isWomen === true
+  ) {
+    return `Lady ${FirstName} ${surname}`;
+  } else if (FirstName && surname) {
+    return `${FirstName} ${surname}`;
+  } else {
+    return `firstName, surname and isWomen are missing. Please fill them in.`;
+  }
+};
+
+const fullName = getFullName(firstName, surname, userFormalName, isWoman);
+const fullName1 = getFullName(firstName, surname, true, false);
+
+console.log(fullName);
+
+I also modified some existing variables on codepen such as getFullName, fullName into it be as been asking in assignment so it worked.
+questions: 
+on Codepen why i needed to create variables in the global scope like you can see at the rows L34 - L37 ?
+why did the function not get variables to inputs of the form ? else how can we link that ?
+
+
+
+
+
+
+
+
+
