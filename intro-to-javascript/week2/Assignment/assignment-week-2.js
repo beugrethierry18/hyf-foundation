@@ -8,7 +8,7 @@ const getFullName = (FirstName, surname, userFormalName, isWomen) => {
   } else if (
     FirstName &&
     surname &&
-    userFormalName === false &&
+    userFormalName === true &&
     isWomen === true
   ) {
     return `Lady ${FirstName} ${surname}`;
