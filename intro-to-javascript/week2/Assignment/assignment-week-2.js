@@ -3,7 +3,7 @@ const person1 = ["KONAN", "Esther"];
 const person2 = ["BENJAMIN", "Hugues"];
 
 const getFullName = (FirstName, surname, userFormalName, isWomen) => {
-  if (FirstName && surname && userFormalName === true) {
+  if (FirstName && surname && userFormalName === false) {
     return `Lord ${FirstName} ${surname}`;
   } else if (
     FirstName &&
