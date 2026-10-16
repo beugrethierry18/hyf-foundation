@@ -40,7 +40,7 @@ const daysOfWeek = [
 ];
 
 function getEventWeekday(daysFromToday) {
-  const today = new Date().getDate();
+  const today = new Date().getDay();
   const daysIndex = (today + daysFromToday) % 7;
 
   return daysOfWeek[daysIndex];
