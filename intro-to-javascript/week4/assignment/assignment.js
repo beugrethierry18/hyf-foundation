@@ -4,7 +4,7 @@ let myTodos = [];
 function getReply(command) {
   if (command.includes("Hello my name is")) {
     //get name customer
-    let parts = command.split("is ");
+    const parts = command.split("is ");
     myName = parts[1];
     return "nice to meet you " + myName;
   }
