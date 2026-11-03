@@ -58,10 +58,10 @@ function getReply(command) {
 
   // get date
   if (command.includes("What day is it today")) {
-    let today = new Date();
-    let day = today.getDate();
-    let month = today.toLocaleString("en-US", { month: "long" });
-    let year = today.getFullYear();
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.toLocaleString("en-US", { month: "long" });
+    const year = today.getFullYear();
     return day + ". of " + month + " " + year;
   }
 
