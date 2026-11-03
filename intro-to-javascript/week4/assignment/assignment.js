@@ -19,9 +19,9 @@ function getReply(command) {
 
   // Add a task
   if (command.includes("Add") && command.includes("to my todo")) {
-    let parts = command.split("Add ");
-    let taskParts = parts[1].split(" to my todo");
-    let task = taskParts[0];
+    const parts = command.split("Add ");
+    const taskParts = parts[1].split(" to my todo");
+    const task = taskParts[0];
     myTodos.push(task);
     return task + " added to your todo";
   }
