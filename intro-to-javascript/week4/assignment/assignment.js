@@ -1,5 +1,5 @@
 let myName = "";
-let myTodos = [];
+const myTodos = [];
 
 function getReply(command) {
   if (command.includes("Hello my name is")) {
