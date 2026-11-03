@@ -28,11 +28,11 @@ function getReply(command) {
 
   // Remove a task (e.g., "Remove fishing from my todo")
   if (command.includes("Remove") && command.includes("from my todo")) {
-    let parts = command.split("Remove ");
-    let taskParts = taskToRemove[1].split(" from my todo");
-    let taskToRemove = taskParts[0];
+    const parts = command.split("Remove ");
+    const taskParts = taskToRemove[1].split(" from my todo");
+    const taskToRemove = taskParts[0];
 
-    let position = myTodos.indexOf(taskToRemove);
+    const position = myTodos.indexOf(taskToRemove);
     if (position !== -1) {
       myTodos.splice(position, 1);
       return "Removed " + taskToRemove + " from your todo";
