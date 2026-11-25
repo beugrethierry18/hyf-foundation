@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hogwarts House Generator</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 540px;
+        margin: 40px auto;
+        padding: 0 16px;
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+
+      .card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 24px;
+      }
+
+      .controls {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      input {
+        flex: 1;
+        padding: 8px 12px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+      }
+
+      button {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        background-color: #1e293b;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Hogwarts House Generator</h1>
+      <label for="student-name">Enter your name:</label>
+      <div class="controls">
+        <input id="student-name" type="text" placeholder="e.g. Benjamin" />
+        <button id="assign-house-btn" type="button">Find my house</button>
+      </div>
+      <p id="house-result" aria-live="polite"></p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
